@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;                  
+  justify-content: center;         
+  align-items: center;             
+ /* background-color: #black; */
+  overflow: hidden; 
+ 
+}
+
+.container {
+  position: relative;
+  width: 550px;
+  height: 500px;
+}
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("reallogin.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: loginn 3s forwards;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes loginn {
+  0%, 50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.login2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: url("reallogin2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: loggiin 2s ease-in-out forwards;
+  animation-delay: 3s; 
+  opacity: 0;
+  z-index: 2;
+}
+@keyframes loggiin {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+.birthday {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 550px;
+  height: 500px;
+  background-image: url("wish.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 3;
+  animation: birthdayAnim 3s forwards;
+  animation-delay: 5s; 
+}
+@keyframes birthdayAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-180deg) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.pic {
+    position: fixed;    
+    top: 35px;        
+    right: 10px;       
+    width: 350px;        
+    height: auto;        
+    border-radius: 10px;
+    z-index: 1000;    
+    opacity: 0;             
+    animation: shre 5s forwards;
+    animation-delay: 8s;     
+}
+
+@keyframes shre {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(180deg) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+}
+.cake {
+  
+  position: relative;
+    bottom: 50px;              
+  left: 0.15%;                    
+  width: 550px;                
+  height: auto;
+  opacity: 0;                   
+  animation: rotateFadeCake 4s forwards;  
+  animation-delay: 13s;
+  z-index: 1000;
+}
+
+/* Keyframes for fade-in + full rotation */
+@keyframes rotateFadeCake {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotate(360deg);
+  }
+}
